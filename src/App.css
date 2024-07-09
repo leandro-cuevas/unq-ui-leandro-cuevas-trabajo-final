@@ -37,6 +37,6 @@ html, body {
     transition: background-color 0.9s;
 }
 
-.difficultyButton:hover {
+.button:hover {
     background-color: #A9A6D6;
 }
