@@ -1,10 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
 import RouterApp from './Router';
+import './App.css'
 
 const App = () => {
   return (
-<div>
-    <h1>Preguntados</h1>
+<div className={"GeneralGame"}>
+    <div className={"Title"}>Quizz</div>
     <BrowserRouter>
       <RouterApp />
     </BrowserRouter>
