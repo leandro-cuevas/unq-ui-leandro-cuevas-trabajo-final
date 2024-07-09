@@ -37,7 +37,7 @@ const SelectDifficulty = () => {
                 {difficulty.map((level) => (
                     <div key={level}>
                         <Link to={`/play/${level}`}>
-                            <button className={"difficultyButton"}>{level}</button>
+                            <button className={"button"}>{level}</button>
                         </Link>
                     </div>
                 ))}
