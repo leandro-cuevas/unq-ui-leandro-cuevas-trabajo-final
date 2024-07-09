@@ -26,8 +26,8 @@ const Question = ({
                 setAnswerStatus(res.answer ? 'correct' : 'incorrect');
                 setIsModalOpen(true); // Opens the modal for both correct and incorrect answers
             })
-            .catch((err) => {
-                setError(err.message);
+            .catch((e) => {
+                setError(e.message);
             });
     };
 

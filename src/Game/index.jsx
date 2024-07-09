@@ -3,6 +3,7 @@ import { getQuestions} from '../service/api';
 import { Link, useParams } from 'react-router-dom';
 import Question from "../Question/index.jsx";
 import Loader from "../Loader/index.jsx";
+import ErrorMessage from "../ErrorMessage/index.jsx";
 import './index.css';
 
 const Game = () => {
@@ -62,6 +63,8 @@ const Game = () => {
                     </Link>
                 </div>
             )}
+
+            {error && <ErrorMessage message={error} />}
         </div>
     );
 };

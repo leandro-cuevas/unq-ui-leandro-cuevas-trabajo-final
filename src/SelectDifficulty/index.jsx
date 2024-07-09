@@ -3,6 +3,7 @@ import { getDifficulty } from '../service/api';
 import { Link } from 'react-router-dom';
 import Loader from "../Loader/index.jsx";
 import './index.css';
+import ErrorMessage from "../ErrorMessage/index.jsx";
 
 const SelectDifficulty = () => {
     const [difficulty, setDifficulty] = useState([]);
@@ -14,8 +15,8 @@ const SelectDifficulty = () => {
             .then((response) => {
                 setDifficulty(response);
             })
-            .catch((err) => {
-                setError(err.message);
+            .catch((e) => {
+                setError(e.message);
             })
             .finally(() => {
                 setIsLoaded(true);
@@ -42,7 +43,9 @@ const SelectDifficulty = () => {
                     </div>
                 ))}
             </div>
+            {error && <ErrorMessage message={error} />}
         </div>
+
     );
 };
 
