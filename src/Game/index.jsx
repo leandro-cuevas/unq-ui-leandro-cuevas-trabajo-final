@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { getQuestions} from '../service/api';
 import { Link, useParams } from 'react-router-dom';
+import { getQuestions} from '../service/api';
 import Question from "../Question/index.jsx";
 import Loader from "../Loader/index.jsx";
 import ErrorMessage from "../ErrorMessage/index.jsx";
@@ -17,8 +17,8 @@ const Game = () => {
     useEffect(() => {
         if (difficulty) {
             getQuestions(difficulty)
-                .then((res) => {
-                    setQuestion(res);
+                .then((response) => {
+                    setQuestion(response);
                 })
                 .catch((e) => {
                     setError(e.message);

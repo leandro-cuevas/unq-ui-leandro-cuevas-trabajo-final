@@ -1,6 +1,6 @@
 import './index.css';
 
-const Option = ({ option, onClick, isSelected, isCorrect, isIncorrect }) => {
+const Option = ({ option, onClick }) => {
 
     return (
         <div>

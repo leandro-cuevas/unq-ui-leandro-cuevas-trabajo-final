@@ -21,10 +21,10 @@ const Question = ({
         if (optionSelected) return;
         setOptionSelected(option);
         sendAnswer({ questionId: id, option })
-            .then((res) => {
-                setCorrectAnswers((prev) => prev + (res.answer ? 1 : 0));
-                setAnswerStatus(res.answer ? 'correct' : 'incorrect');
-                setIsModalOpen(true); // Opens the modal for both correct and incorrect answers
+            .then((response) => {
+                setCorrectAnswers((prev) => prev + (response.answer ? 1 : 0));
+                setAnswerStatus(response.answer ? 'correct' : 'incorrect');
+                setIsModalOpen(true);
             })
             .catch((e) => {
                 setError(e.message);
@@ -63,8 +63,6 @@ const Question = ({
                         key={optionKey}
                         option={optionValue}
                         onClick={() => onSubmitAnswer(optionKey)}
-                        isSelected={optionSelected === optionKey}
-                        answerStatus={answerStatus}
                     />
                 ))}
             </div>

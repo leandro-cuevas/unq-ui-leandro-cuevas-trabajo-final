@@ -3,7 +3,7 @@ import './index.css';
 const ModalMessage = ({ isOpen, answerStatus }) => {
     if (!isOpen) return null;
 
-    let message = "Incorrect Answer";
+    let message = "Incorrect answer";
     let contentClass = "modalContent incorrect";
     if (answerStatus === 'correct') {
         message = "¡Correct answer!";
