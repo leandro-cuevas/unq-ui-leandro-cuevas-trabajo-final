@@ -4,7 +4,7 @@ const Option = ({ option, onClick, isSelected, isCorrect, isIncorrect }) => {
 
     return (
         <div>
-            <button className={"button"} onClick={onClick}>
+            <button className={"optionButton"} onClick={onClick}>
                 {option}
             </button>
         </div>

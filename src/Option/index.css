@@ -1,3 +1,13 @@
-.button {
+.optionButton {
     width: 300px;
+    gap: 20px;
+    background-color: white;
+    color: #090333;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 25px;
+    padding: 20px;
+    font-size: 30px;
+    transition: background-color 0.9s;
 }
