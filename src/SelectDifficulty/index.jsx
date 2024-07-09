@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { getDifficulty } from '../service/api';
 import { Link } from 'react-router-dom';
+import Loader from "../Loader/index.jsx";
+import './index.css';
 
 const SelectDifficulty = () => {
     const [difficulty, setDifficulty] = useState([]);
@@ -23,18 +25,18 @@ const SelectDifficulty = () => {
     if (!isLoaded) {
         return (
             <div>
-                Cargando...
+                <Loader />
             </div>
         );
     }
 
     return (
         <div>
-            <div>Select the difficulty level of the game</div>
+            <div className={"Selecter"}>Select the difficulty level of the game</div>
             <div>
                 {difficulty.map((level) => (
                     <div key={level}>
-                        <Link to={`/game/${level}`}>
+                        <Link to={`/play/${level}`}>
                             <button>{level}</button>
                         </Link>
                     </div>
