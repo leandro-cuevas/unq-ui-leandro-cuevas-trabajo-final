@@ -23,9 +23,7 @@ const Game = () => {
                 .catch((e) => {
                     setError(e.message);
                 })
-                .finally(() => {
-                    setIsLoaded(true);
-                });
+                .finally(() => setTimeout(() => {setIsLoaded(true)}, 1000));
         }
     }, [difficulty]);
 
@@ -36,12 +34,6 @@ const Game = () => {
             </div>
         );
     }
-
-    const resetGame = () => {
-        setCurrentQuestion(0);
-        setCorrectAnswers(0);
-        setQuestion([{}])
-    };
 
     return (
         <div>
@@ -59,7 +51,7 @@ const Game = () => {
                     <div className={"internStyle"}>Game over</div>
                     <div className={"internStyle"}>Correct answers: {correctAnswers}</div>
                     <Link to="/play" replace>
-                        <button className={"button"} onClick={resetGame}>Play again!</button>
+                        <button className={"button"}>Play again!</button>
                     </Link>
                 </div>
             )}

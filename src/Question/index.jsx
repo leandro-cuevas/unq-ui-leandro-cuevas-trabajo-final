@@ -35,11 +35,11 @@ const Question = ({
         let timer;
         if (isModalOpen) {
             timer = setTimeout(() => {
-                setIsModalOpen(false); // Closes the modal automatically
+                setIsModalOpen(false);
                 setAnswerStatus('');
                 setOptionSelected('');
                 setCurrentQuestion((x) => x + 1);
-            }, 2000); // Adjust time as needed
+            }, 2000);
         }
         return () => clearTimeout(timer);
     }, [isModalOpen, setCurrentQuestion]);
