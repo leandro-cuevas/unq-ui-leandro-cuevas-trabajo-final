@@ -54,7 +54,7 @@ const Question = ({
 
     return (
         <div>
-            <div className={"internStyle"}>Counter: {correctAnswers}</div>
+            <div className={"internStyle"}>Score: {correctAnswers}</div>
             <div className={"internStyle"}>{question}</div>
             <ModalMessage isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} answerStatus={answerStatus} />
             <div className={answerStatus}>
